@@ -1,0 +1,54 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python bytecode and packaging
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+
+# Test, coverage, and type-checker caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Logs and local runtime output
+*.log
+logs/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Raw third-party data is intentionally not committed. The processed and
+# semi-synthetic CSVs are required by the application and remain tracked.
+data/raw/
+
+# Keep only the four canonical evaluation snapshots and the comparison file.
+evaluation/results/*
+!evaluation/results/baseline_routing_results.json
+!evaluation/results/baseline_workflow_results.json
+!evaluation/results/routing_results.json
+!evaluation/results/workflow_results.json
+!evaluation/results/benchmark_comparison.json

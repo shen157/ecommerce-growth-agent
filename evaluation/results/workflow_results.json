@@ -1,0 +1,857 @@
+{
+  "summary": {
+    "total_single_turn_cases": 20,
+    "routing_accuracy": 1,
+    "automated_workflow_success_rate": 1,
+    "critic_pass_rate": 1,
+    "critic_revision_rate": 0,
+    "recommendation_accuracy": 1,
+    "memory_followup_accuracy": 1,
+    "error_rate": 0.0,
+    "average_latency_seconds": 23.14153307499364,
+    "p95_latency_seconds": 48.17172092004331,
+    "average_specialist_calls": 1.3
+  },
+  "node_latency_summary": {
+    "coordinator": {
+      "count": 20,
+      "average_seconds": 2.5423324449977374,
+      "p95_seconds": 2.847991135076154,
+      "max_seconds": 2.979203899973072
+    },
+    "behavior_agent": {
+      "count": 8,
+      "average_seconds": 15.088534112495836,
+      "p95_seconds": 30.93010061496169,
+      "max_seconds": 38.33099449996371
+    },
+    "fast_decision": {
+      "count": 9,
+      "average_seconds": 4.8122252337634563e-05,
+      "p95_seconds": 7.821999024599789e-05,
+      "max_seconds": 8.969998452812433e-05
+    },
+    "critic_agent": {
+      "count": 20,
+      "average_seconds": 3.3978382800123654,
+      "p95_seconds": 6.027998630062215,
+      "max_seconds": 10.810183300054632
+    },
+    "business_agent": {
+      "count": 11,
+      "average_seconds": 11.401519045466557,
+      "p95_seconds": 19.026387799996883,
+      "max_seconds": 19.337911000009626
+    },
+    "experiment_agent": {
+      "count": 7,
+      "average_seconds": 9.476026757154614,
+      "p95_seconds": 11.696021389984526,
+      "max_seconds": 11.736129199969582
+    },
+    "decision_agent": {
+      "count": 11,
+      "average_seconds": 4.960629690893587,
+      "p95_seconds": 5.999117849976756,
+      "max_seconds": 6.159520299988799
+    },
+    "parallel_specialists": {
+      "count": 2,
+      "average_seconds": 13.813280199945439,
+      "p95_seconds": 14.19172956989496,
+      "max_seconds": 14.233779499889351
+    }
+  },
+  "single_turn_cases": [
+    {
+      "id": "B01",
+      "query": "How are repeat customers different from one-time customers?",
+      "expected_agents": [
+        "behavior_agent"
+      ],
+      "latency_seconds": 14.565610900055617,
+      "workflow_reported_latency": 14.56260150007438,
+      "node_latencies": {
+        "coordinator": 2.8410852000815794,
+        "behavior_agent": 9.00405220000539,
+        "fast_decision": 3.4800032153725624e-05,
+        "critic_agent": 2.700498400023207
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "behavior_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "B02",
+      "query": "Is late delivery associated with worse customer reviews?",
+      "expected_agents": [
+        "behavior_agent"
+      ],
+      "latency_seconds": 23.511345699895173,
+      "workflow_reported_latency": 23.50849899998866,
+      "node_latencies": {
+        "coordinator": 2.744119399925694,
+        "behavior_agent": 9.941107999999076,
+        "fast_decision": 4.4100102968513966e-05,
+        "critic_agent": 10.810183300054632
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "behavior_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "B03",
+      "query": "Which categories are most preferred by repeat customers?",
+      "expected_agents": [
+        "behavior_agent"
+      ],
+      "latency_seconds": 12.791783399996348,
+      "workflow_reported_latency": 12.79006309993565,
+      "node_latencies": {
+        "coordinator": 2.425821300013922,
+        "behavior_agent": 7.7945597999496385,
+        "fast_decision": 3.5400036722421646e-05,
+        "critic_agent": 2.5580960999941453
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "behavior_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "B04",
+      "query": "What categories do one-time customers prefer most?",
+      "expected_agents": [
+        "behavior_agent"
+      ],
+      "latency_seconds": 13.201998800039291,
+      "workflow_reported_latency": 13.199847499956377,
+      "node_latencies": {
+        "coordinator": 2.514791800058447,
+        "behavior_agent": 8.092111799982376,
+        "fast_decision": 4.930002614855766e-05,
+        "critic_agent": 2.5796288000419736
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "behavior_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "BU01",
+      "query": "Which categories experienced the largest revenue decline in June 2018?",
+      "expected_agents": [
+        "business_agent"
+      ],
+      "latency_seconds": 12.811174900038168,
+      "workflow_reported_latency": 12.8094486000482,
+      "node_latencies": {
+        "coordinator": 2.979203899973072,
+        "business_agent": 7.156484300037846,
+        "fast_decision": 6.0999998822808266e-05,
+        "critic_agent": 2.658704800065607
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "business_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "BU02",
+      "query": "Which product categories generated the most merchandise revenue?",
+      "expected_agents": [
+        "business_agent"
+      ],
+      "latency_seconds": 10.166357800015248,
+      "workflow_reported_latency": 10.16312729998026,
+      "node_latencies": {
+        "coordinator": 2.2997290999628603,
+        "business_agent": 5.323883600067347,
+        "fast_decision": 3.390002530068159e-05,
+        "critic_agent": 2.5267329999478534
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "business_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "BU03",
+      "query": "What was the average order value in July 2018?",
+      "expected_agents": [
+        "business_agent"
+      ],
+      "latency_seconds": 9.887601100024767,
+      "workflow_reported_latency": 9.884976799949072,
+      "node_latencies": {
+        "coordinator": 2.4247222000267357,
+        "business_agent": 4.9204792000819,
+        "fast_decision": 4.369998350739479e-05,
+        "critic_agent": 2.525310800061561
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "business_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "BU04",
+      "query": "Show me the monthly revenue trend.",
+      "expected_agents": [
+        "business_agent"
+      ],
+      "latency_seconds": 12.097816800000146,
+      "workflow_reported_latency": 12.095272399950773,
+      "node_latencies": {
+        "coordinator": 2.3905240999301895,
+        "business_agent": 7.308586400002241,
+        "fast_decision": 8.969998452812433e-05,
+        "critic_agent": 2.3844091000501066
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "business_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "BU05",
+      "query": "Which product categories generated the least revenue?",
+      "expected_agents": [
+        "business_agent"
+      ],
+      "latency_seconds": 11.528145899996161,
+      "workflow_reported_latency": 11.525795200024731,
+      "node_latencies": {
+        "coordinator": 2.423940800013952,
+        "business_agent": 6.339963500038721,
+        "fast_decision": 4.120008088648319e-05,
+        "critic_agent": 2.75071549997665
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "business_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "E01",
+      "query": "Should we roll out EXP001?",
+      "expected_agents": [
+        "experiment_agent"
+      ],
+      "latency_seconds": 18.441320699988864,
+      "workflow_reported_latency": 18.439045100007206,
+      "node_latencies": {
+        "coordinator": 2.395319200004451,
+        "experiment_agent": 8.530804500100203,
+        "decision_agent": 4.088169099995866,
+        "critic_agent": 3.4111744000110775
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "experiment_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": "do_not_rollout",
+      "predicted_recommendation": "do_not_rollout",
+      "recommendation_match": true,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "E02",
+      "query": "Should we roll out EXP002?",
+      "expected_agents": [
+        "experiment_agent"
+      ],
+      "latency_seconds": 19.37900939991232,
+      "workflow_reported_latency": 19.377107999986038,
+      "node_latencies": {
+        "coordinator": 2.574546799995005,
+        "experiment_agent": 8.904567799996585,
+        "decision_agent": 5.124992499942891,
+        "critic_agent": 2.7611864999635145
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "experiment_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": "rollout",
+      "predicted_recommendation": "rollout",
+      "recommendation_match": true,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "E03",
+      "query": "Should we roll out EXP003?",
+      "expected_agents": [
+        "experiment_agent"
+      ],
+      "latency_seconds": 18.91916940000374,
+      "workflow_reported_latency": 18.91665050003212,
+      "node_latencies": {
+        "coordinator": 2.5828045000089332,
+        "experiment_agent": 9.451196999987587,
+        "decision_agent": 4.1678494000807405,
+        "critic_agent": 2.70019180001691
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "experiment_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": "do_not_rollout",
+      "predicted_recommendation": "do_not_rollout",
+      "recommendation_match": true,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "E04",
+      "query": "Is the conversion improvement in EXP001 statistically significant?",
+      "expected_agents": [
+        "experiment_agent"
+      ],
+      "latency_seconds": 16.532393699977547,
+      "workflow_reported_latency": 16.530598900048062,
+      "node_latencies": {
+        "coordinator": 2.704849399975501,
+        "experiment_agent": 7.636069100000896,
+        "decision_agent": 3.729260899941437,
+        "critic_agent": 2.4458704000571743
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "experiment_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "E05",
+      "query": "What is the profit impact of EXP002?",
+      "expected_agents": [
+        "experiment_agent"
+      ],
+      "latency_seconds": 18.299565199995413,
+      "workflow_reported_latency": 18.296703300089575,
+      "node_latencies": {
+        "coordinator": 2.425593400024809,
+        "experiment_agent": 8.47098320000805,
+        "decision_agent": 4.783552599954419,
+        "critic_agent": 2.6038462000433356
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "experiment_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 1,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "M01",
+      "query": "Which categories do repeat customers prefer, and are those categories performing well in revenue?",
+      "expected_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "latency_seconds": 38.08949309994932,
+      "workflow_reported_latency": 38.08666909998283,
+      "node_latencies": {
+        "coordinator": 2.40250940003898,
+        "behavior_agent": 14.527828000020236,
+        "business_agent": 13.098434799932875,
+        "decision_agent": 5.012269499944523,
+        "critic_agent": 3.0312138999579474
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 2,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "M02",
+      "query": "Compare repeat-customer category preferences with the highest-revenue product categories.",
+      "expected_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "latency_seconds": 68.963299700059,
+      "workflow_reported_latency": 68.96030360006262,
+      "node_latencies": {
+        "coordinator": 2.4790807000827044,
+        "behavior_agent": 38.33099449996371,
+        "business_agent": 19.337911000009626,
+        "decision_agent": 5.4461671999888495,
+        "critic_agent": 3.3512140000239015
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 2,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "M03",
+      "query": "Which categories do repeat customers prefer and which of those categories have recently declined in revenue?",
+      "expected_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "latency_seconds": 42.97287229995709,
+      "workflow_reported_latency": 42.970075199962594,
+      "node_latencies": {
+        "coordinator": 2.5420986999524757,
+        "behavior_agent": 15.832035200088285,
+        "business_agent": 15.607240699930117,
+        "decision_agent": 4.9225546000525355,
+        "critic_agent": 4.05234269995708
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 2,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "M04",
+      "query": "Evaluate EXP002 and also describe the overall revenue trend around July 2018.",
+      "expected_agents": [
+        "experiment_agent",
+        "business_agent"
+      ],
+      "latency_seconds": 24.86062079994008,
+      "workflow_reported_latency": 24.85775950003881,
+      "node_latencies": {
+        "coordinator": 2.6122868999373168,
+        "experiment_agent": 11.602436500019394,
+        "business_agent": 13.390431400039233,
+        "parallel_specialists": 13.392780900001526,
+        "decision_agent": 5.838715399964713,
+        "critic_agent": 3.0011865999549627
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "experiment_agent",
+        "business_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 2,
+      "expected_recommendation": "rollout",
+      "predicted_recommendation": "rollout",
+      "recommendation_match": true,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "M05",
+      "query": "Should EXP001 be rolled out, and what was the overall business revenue trend around June 2018?",
+      "expected_agents": [
+        "experiment_agent",
+        "business_agent"
+      ],
+      "latency_seconds": 28.73365459998604,
+      "workflow_reported_latency": 28.730683699948713,
+      "node_latencies": {
+        "coordinator": 2.54707019997295,
+        "experiment_agent": 11.736129199969582,
+        "business_agent": 14.218430000008084,
+        "parallel_specialists": 14.233779499889351,
+        "decision_agent": 6.159520299988799,
+        "critic_agent": 5.77630470006261
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "experiment_agent",
+        "business_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 2,
+      "expected_recommendation": "do_not_rollout",
+      "predicted_recommendation": "do_not_rollout",
+      "recommendation_match": true,
+      "automated_success": true,
+      "errors": []
+    },
+    {
+      "id": "M06",
+      "query": "How do repeat customers behave and how do their preferred categories perform financially?",
+      "expected_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "latency_seconds": 47.07742730004247,
+      "workflow_reported_latency": 47.074413700029254,
+      "node_latencies": {
+        "coordinator": 2.5365518999751657,
+        "behavior_agent": 17.185583399957977,
+        "business_agent": 18.71486459998414,
+        "decision_agent": 5.293875099974684,
+        "critic_agent": 3.327954599983059
+      },
+      "fatal_error": null,
+      "predicted_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "routing_exact": true,
+      "agent_precision": 1.0,
+      "agent_recall": 1.0,
+      "agent_f1": 1.0,
+      "workflow_completed": true,
+      "critic_pass": true,
+      "revision_count": 0,
+      "specialist_calls": 2,
+      "expected_recommendation": null,
+      "predicted_recommendation": null,
+      "recommendation_match": null,
+      "automated_success": true,
+      "errors": []
+    }
+  ],
+  "memory_cases": [
+    {
+      "id": "MEM01",
+      "memory_success": true,
+      "turns": [
+        {
+          "turn": 1,
+          "query": "Should we roll out EXP001?",
+          "latency_seconds": 18.31515259994194,
+          "workflow_reported_latency": 18.312888300046325,
+          "node_latencies": {
+            "coordinator": 2.45768680004403,
+            "experiment_agent": 8.782488299999386,
+            "decision_agent": 4.311094100004993,
+            "critic_agent": 2.7497823000885546
+          },
+          "fatal_error": null,
+          "predicted_agents": [
+            "experiment_agent"
+          ],
+          "routing_exact": true,
+          "agent_precision": 1.0,
+          "agent_recall": 1.0,
+          "agent_f1": 1.0,
+          "workflow_completed": true,
+          "critic_pass": true,
+          "revision_count": 0,
+          "specialist_calls": 1,
+          "expected_recommendation": "do_not_rollout",
+          "predicted_recommendation": "do_not_rollout",
+          "recommendation_match": true,
+          "automated_success": true,
+          "errors": []
+        },
+        {
+          "turn": 2,
+          "query": "What about EXP002?",
+          "latency_seconds": 20.659773899940774,
+          "workflow_reported_latency": 20.65811840002425,
+          "node_latencies": {
+            "coordinator": 2.2735384000698105,
+            "experiment_agent": 11.137944100075401,
+            "decision_agent": 4.488582400023006,
+            "critic_agent": 2.7453763999510556
+          },
+          "fatal_error": null,
+          "predicted_agents": [
+            "experiment_agent"
+          ],
+          "routing_exact": true,
+          "agent_precision": 1.0,
+          "agent_recall": 1.0,
+          "agent_f1": 1.0,
+          "workflow_completed": true,
+          "critic_pass": true,
+          "revision_count": 0,
+          "specialist_calls": 1,
+          "expected_recommendation": "rollout",
+          "predicted_recommendation": "rollout",
+          "recommendation_match": true,
+          "automated_success": true,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": "MEM02",
+      "memory_success": true,
+      "turns": [
+        {
+          "turn": 1,
+          "query": "Which categories do repeat customers prefer?",
+          "latency_seconds": 20.699623299995437,
+          "workflow_reported_latency": 20.697309899958782,
+          "node_latencies": {
+            "coordinator": 2.5762154000112787,
+            "behavior_agent": 7.612388600013219,
+            "fast_decision": 3.830005880445242e-05,
+            "critic_agent": 10.496885000029579
+          },
+          "fatal_error": null,
+          "predicted_agents": [
+            "behavior_agent"
+          ],
+          "routing_exact": true,
+          "agent_precision": 1.0,
+          "agent_recall": 1.0,
+          "agent_f1": 1.0,
+          "workflow_completed": true,
+          "critic_pass": true,
+          "revision_count": 0,
+          "specialist_calls": 1,
+          "expected_recommendation": null,
+          "predicted_recommendation": null,
+          "recommendation_match": null,
+          "automated_success": true,
+          "errors": []
+        },
+        {
+          "turn": 2,
+          "query": "Are those categories performing well in revenue?",
+          "latency_seconds": 14.064725699950941,
+          "workflow_reported_latency": 14.06163909996394,
+          "node_latencies": {
+            "coordinator": 2.9293553000316024,
+            "business_agent": 8.074765600031242,
+            "fast_decision": 3.4400029107928276e-05,
+            "critic_agent": 3.0438470999943092
+          },
+          "fatal_error": null,
+          "predicted_agents": [
+            "business_agent"
+          ],
+          "routing_exact": true,
+          "agent_precision": 1.0,
+          "agent_recall": 1.0,
+          "agent_f1": 1.0,
+          "workflow_completed": true,
+          "critic_pass": true,
+          "revision_count": 0,
+          "specialist_calls": 1,
+          "expected_recommendation": null,
+          "predicted_recommendation": null,
+          "recommendation_match": null,
+          "automated_success": true,
+          "errors": []
+        }
+      ]
+    }
+  ]
+}

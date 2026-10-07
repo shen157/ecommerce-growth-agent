@@ -1,0 +1,367 @@
+{
+  "summary": {
+    "total_cases": 20,
+    "routing_accuracy": 1.0,
+    "routing_order_accuracy": 1.0,
+    "agent_selection_precision": 1.0,
+    "agent_selection_recall": 1.0,
+    "agent_selection_f1": 1.0,
+    "error_rate": 0.0,
+    "average_latency_seconds": 2.9027515599969775,
+    "p95_latency_seconds": 3.4725810150441254
+  },
+  "cases": [
+    {
+      "id": "B01",
+      "query": "How are repeat customers different from one-time customers?",
+      "expected_agents": [
+        "behavior_agent"
+      ],
+      "predicted_agents": [
+        "behavior_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 3.4401484999107197,
+      "error": null
+    },
+    {
+      "id": "B02",
+      "query": "Is late delivery associated with worse customer reviews?",
+      "expected_agents": [
+        "behavior_agent"
+      ],
+      "predicted_agents": [
+        "behavior_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 4.0312268999405205,
+      "error": null
+    },
+    {
+      "id": "B03",
+      "query": "Which categories are most preferred by repeat customers?",
+      "expected_agents": [
+        "behavior_agent"
+      ],
+      "predicted_agents": [
+        "behavior_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.4696599999442697,
+      "error": null
+    },
+    {
+      "id": "B04",
+      "query": "What categories do one-time customers prefer most?",
+      "expected_agents": [
+        "behavior_agent"
+      ],
+      "predicted_agents": [
+        "behavior_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.9446293000364676,
+      "error": null
+    },
+    {
+      "id": "BU01",
+      "query": "Which categories experienced the largest revenue decline in June 2018?",
+      "expected_agents": [
+        "business_agent"
+      ],
+      "predicted_agents": [
+        "business_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.6044378000078723,
+      "error": null
+    },
+    {
+      "id": "BU02",
+      "query": "Which product categories generated the most merchandise revenue?",
+      "expected_agents": [
+        "business_agent"
+      ],
+      "predicted_agents": [
+        "business_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.606979400035925,
+      "error": null
+    },
+    {
+      "id": "BU03",
+      "query": "What was the average order value in July 2018?",
+      "expected_agents": [
+        "business_agent"
+      ],
+      "predicted_agents": [
+        "business_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.70771099999547,
+      "error": null
+    },
+    {
+      "id": "BU04",
+      "query": "Show me the monthly revenue trend.",
+      "expected_agents": [
+        "business_agent"
+      ],
+      "predicted_agents": [
+        "business_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 3.344372299965471,
+      "error": null
+    },
+    {
+      "id": "BU05",
+      "query": "Which product categories generated the least revenue?",
+      "expected_agents": [
+        "business_agent"
+      ],
+      "predicted_agents": [
+        "business_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.5834816000424325,
+      "error": null
+    },
+    {
+      "id": "E01",
+      "query": "Should we roll out EXP001?",
+      "expected_agents": [
+        "experiment_agent"
+      ],
+      "predicted_agents": [
+        "experiment_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.63002130005043,
+      "error": null
+    },
+    {
+      "id": "E02",
+      "query": "Should we roll out EXP002?",
+      "expected_agents": [
+        "experiment_agent"
+      ],
+      "predicted_agents": [
+        "experiment_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.850005400017835,
+      "error": null
+    },
+    {
+      "id": "E03",
+      "query": "Should we roll out EXP003?",
+      "expected_agents": [
+        "experiment_agent"
+      ],
+      "predicted_agents": [
+        "experiment_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 3.4431786000495777,
+      "error": null
+    },
+    {
+      "id": "E04",
+      "query": "Is the conversion improvement in EXP001 statistically significant?",
+      "expected_agents": [
+        "experiment_agent"
+      ],
+      "predicted_agents": [
+        "experiment_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.672352600027807,
+      "error": null
+    },
+    {
+      "id": "E05",
+      "query": "What is the profit impact of EXP002?",
+      "expected_agents": [
+        "experiment_agent"
+      ],
+      "predicted_agents": [
+        "experiment_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.945902599953115,
+      "error": null
+    },
+    {
+      "id": "M01",
+      "query": "Which categories do repeat customers prefer, and are those categories performing well in revenue?",
+      "expected_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "predicted_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.630606999970041,
+      "error": null
+    },
+    {
+      "id": "M02",
+      "query": "Compare repeat-customer category preferences with the highest-revenue product categories.",
+      "expected_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "predicted_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.6128952000290155,
+      "error": null
+    },
+    {
+      "id": "M03",
+      "query": "Which categories do repeat customers prefer and which of those categories have recently declined in revenue?",
+      "expected_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "predicted_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.964173800079152,
+      "error": null
+    },
+    {
+      "id": "M04",
+      "query": "Evaluate EXP002 and also describe the overall revenue trend around July 2018.",
+      "expected_agents": [
+        "experiment_agent",
+        "business_agent"
+      ],
+      "predicted_agents": [
+        "experiment_agent",
+        "business_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.843753399909474,
+      "error": null
+    },
+    {
+      "id": "M05",
+      "query": "Should EXP001 be rolled out, and what was the overall business revenue trend around June 2018?",
+      "expected_agents": [
+        "experiment_agent",
+        "business_agent"
+      ],
+      "predicted_agents": [
+        "experiment_agent",
+        "business_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.805018899962306,
+      "error": null
+    },
+    {
+      "id": "M06",
+      "query": "How do repeat customers behave and how do their preferred categories perform financially?",
+      "expected_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "predicted_agents": [
+        "behavior_agent",
+        "business_agent"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_set_match": true,
+      "exact_order_match": true,
+      "latency_seconds": 2.9244756000116467,
+      "error": null
+    }
+  ]
+}

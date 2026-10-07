@@ -1,0 +1,4 @@
+experiment_id,experiment_name,expected_conversion_effect,expected_profit_effect,expected_recommendation
+EXP001,Deep Discount Campaign,positive,negative,do_not_rollout
+EXP002,Personalized Recommendation,positive,positive,rollout
+EXP003,Minor UI Checkout Change,neutral,neutral,do_not_rollout

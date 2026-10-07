@@ -1,0 +1,16 @@
+# Application
+fastapi==0.119.0
+langchain==1.4.3
+langchain-openai==1.6.7
+langgraph==1.2.14
+numpy==2.5.3
+openai==3.26.0
+pandas==3.0.6
+pydantic==2.13.5
+python-dotenv==1.2.4
+scipy==1.18.1
+uvicorn[standard]==0.38.0
+
+# Tests (kept here so one install reproduces local development and CI)
+httpx==0.28.1
+pytest==9.1.1

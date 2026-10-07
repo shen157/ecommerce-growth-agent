@@ -1,0 +1,38 @@
+{
+  "total_single_turn_cases": 20,
+  "baseline": {
+    "source": "baseline_workflow_results.json",
+    "routing_accuracy": 1.0,
+    "workflow_success_rate": 0.95,
+    "critic_pass_rate": 1.0,
+    "critic_revision_rate": 0.1,
+    "recommendation_accuracy": 1.0,
+    "memory_followup_accuracy": 1.0,
+    "average_specialist_calls": 1.3,
+    "average_latency_seconds": 48.32607305999845,
+    "p95_latency_seconds": 118.29258987000213
+  },
+  "final": {
+    "source": "workflow_results.json",
+    "routing_accuracy": 1.0,
+    "workflow_success_rate": 1.0,
+    "critic_pass_rate": 1.0,
+    "critic_revision_rate": 0.0,
+    "recommendation_accuracy": 1.0,
+    "memory_followup_accuracy": 1.0,
+    "error_rate": 0.0,
+    "average_specialist_calls": 1.3,
+    "average_latency_seconds": 23.14153307499364,
+    "p95_latency_seconds": 48.17172092004331
+  },
+  "improvement": {
+    "average_latency_reduction_percent": 52.1,
+    "p95_latency_reduction_percent": 59.3,
+    "workflow_success_percentage_point_change": 5.0
+  },
+  "notes": [
+    "The historical baseline remains unchanged.",
+    "Baseline workflow success was 95% because the legacy M06 run used an invalid AOV tool parameter.",
+    "Latency reflects online model and network conditions and is not a production load test."
+  ]
+}
