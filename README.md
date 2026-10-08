@@ -178,13 +178,13 @@ flowchart LR
     Build --> Image[Docker Image]
     Image --> API[FastAPI Service]
 
-    API --> Health[/health]
-    API --> Analyze[/analyze]
+    API --> Health["/health"]
+    API --> Analyze["/analyze"]
 
     %% Observability
     API --> Logs[Structured JSON Logs]
     Logs --> Obs[Observability]
-    Obs --> Metrics[Run ID / Thread ID / Node Latency / Workflow Latency]
+    Obs --> Metrics["Run ID / Thread ID / Node Latency / Workflow Latency"]
 
     %% Runtime configuration
     Secrets[Environment Variables] -. Runtime config .-> API
