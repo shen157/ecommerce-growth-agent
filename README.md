@@ -54,6 +54,20 @@ flowchart TD
     Response --> API
     API --> Client
 
+    %% Shared workflow state
+    State[(Shared AgentState)]
+
+    Coordinator -. routing decision .-> State
+    Router -. reads workflow state .-> State
+    Behavior -. behavior report .-> State
+    Business -. business report .-> State
+    Experiment -. experiment report .-> State
+    Parallel -. specialist reports .-> State
+    Fast -. decision report .-> State
+    Decision -. decision report .-> State
+    Critic -. critique / revision state .-> State
+    Save -. conversation messages .-> State
+
     %% Tools and data
     Behavior --> BehaviorTools[Behavior Tools]
     Business --> BusinessTools[Business Tools]
@@ -64,14 +78,18 @@ flowchart TD
     ExperimentTools --> Experiments[(Semi-synthetic Experiment Data)]
 
     %% Conversation memory
-    Checkpointer[(LangGraph InMemorySaver)] -. Restores thread messages .-> Context[Context Builder]
-    Context -. Contextual query .-> Coordinator
-    Context -. Contextual query .-> Behavior
-    Context -. Contextual query .-> Business
-    Context -. Contextual query .-> Experiment
+    Checkpointer[(LangGraph InMemorySaver)]
+    Checkpointer -. checkpoints by thread_id .-> State
+    State -. recent messages + user query .-> Context[Context Builder]
+
+    Context -. contextual query .-> Coordinator
+    Context -. contextual query .-> Behavior
+    Context -. contextual query .-> Business
+    Context -. contextual query .-> Experiment
 
     %% External LLM provider
     LLM[(OpenAI-compatible LLM Endpoint)]
+
     Coordinator -. LLM Call .-> LLM
     Behavior -. LLM Call .-> LLM
     Business -. LLM Call .-> LLM
@@ -141,6 +159,36 @@ Request:
 `thread_id` is optional. Reusing it preserves conversation context within the current process. The response includes the selected and completed agents, structured decision, critic verdict, safe errors, per-node latency trace, run ID, and total workflow latency.
 
 Interactive API documentation is available at `http://localhost:8000/docs` while the server is running.
+
+## Engineering and delivery
+
+```mermaid
+flowchart LR
+    Dev[Local Development] --> GitHub[GitHub Repository]
+
+    %% Continuous integration
+    GitHub --> CI[GitHub Actions CI]
+    CI --> Install[Install Dependencies]
+    Install --> Check[pip check]
+    Check --> Tests[38 Automated Tests]
+
+    %% Containerization and runtime
+    GitHub --> Dockerfile[Dockerfile]
+    Dockerfile --> Build[Docker Build]
+    Build --> Image[Docker Image]
+    Image --> API[FastAPI Service]
+
+    API --> Health[/health]
+    API --> Analyze[/analyze]
+
+    %% Observability
+    API --> Logs[Structured JSON Logs]
+    Logs --> Obs[Observability]
+    Obs --> Metrics[Run ID / Thread ID / Node Latency / Workflow Latency]
+
+    %% Runtime configuration
+    Secrets[Environment Variables] -. Runtime config .-> API
+```
 
 ## Observability
 
