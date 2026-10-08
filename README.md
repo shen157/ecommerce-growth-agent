@@ -21,31 +21,63 @@ The system is built with LangGraph, LangChain, FastAPI, Pydantic, pandas, NumPy,
 ```mermaid
 flowchart TD
     Client[Client] --> API[FastAPI /analyze]
-    API --> Coordinator[Coordinator]
-    Coordinator --> Router{Dependency-aware router}
+    API --> Coordinator[Coordinator Agent]
 
-    Router --> Behavior[Behavior Agent]
-    Router --> Business[Business Agent]
-    Router --> Experiment[Experiment Agent]
+    Coordinator --> Router{Dependency-aware routing}
+
+    %% Specialist execution
+    Router -->|Selected specialist| Behavior[Behavior Agent]
+    Router -->|Selected specialist| Business[Business Agent]
+    Router -->|Selected specialist| Experiment[Experiment Agent]
+
     Behavior --> Router
     Business --> Router
     Experiment --> Router
 
-    Router --> Parallel[Parallel specialists]
+    %% Parallel specialist path
+    Router -->|Independent multi-agent request| Parallel[Parallel Specialists]
     Parallel --> Decision[Decision Agent]
-    Router --> Fast[Deterministic fast decision]
-    Router --> Decision
+
+    %% Single-agent fast path
+    Router -->|Single Behavior / Business| Fast[Deterministic Fast Decision]
+
+    %% Full decision path
+    Router -->|Single Experiment or multi-agent synthesis| Decision
 
     Fast --> Critic[Critic Agent]
     Decision --> Critic
-    Critic -->|pass or revision limit| Memory[Save conversation]
-    Critic -->|revise once| Decision
-    Memory --> Response[Structured response]
 
-    Checkpointer[(In-memory checkpointer)] -. thread context .-> Coordinator
-    Data[(Processed Olist data and semi-synthetic experiments)] --> Behavior
-    Data --> Business
-    Data --> Experiment
+    Critic -->|Revise once| Decision
+    Critic -->|Pass or revision limit| Save[Save Conversation]
+
+    Save --> Response[Structured Response]
+    Response --> API
+    API --> Client
+
+    %% Tools and data
+    Behavior --> BehaviorTools[Behavior Tools]
+    Business --> BusinessTools[Business Tools]
+    Experiment --> ExperimentTools[Experiment Tools]
+
+    BehaviorTools --> Data[(Processed Olist Data)]
+    BusinessTools --> Data
+    ExperimentTools --> Experiments[(Semi-synthetic Experiment Data)]
+
+    %% Conversation memory
+    Checkpointer[(LangGraph InMemorySaver)] -. Restores thread messages .-> Context[Context Builder]
+    Context -. Contextual query .-> Coordinator
+    Context -. Contextual query .-> Behavior
+    Context -. Contextual query .-> Business
+    Context -. Contextual query .-> Experiment
+
+    %% External LLM provider
+    LLM[(OpenAI-compatible LLM Endpoint)]
+    Coordinator -. LLM Call .-> LLM
+    Behavior -. LLM Call .-> LLM
+    Business -. LLM Call .-> LLM
+    Experiment -. LLM Call .-> LLM
+    Decision -. LLM Call .-> LLM
+    Critic -. LLM Call .-> LLM
 ```
 
 ### Agent roles
